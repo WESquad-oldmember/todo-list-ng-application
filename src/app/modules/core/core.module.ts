@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { SharedModule } from './../shared/shared.module';
 import { AppComponent } from './components/app/app.component';
 import { coreRoutes } from './core.routes';
 
@@ -11,6 +12,7 @@ import { coreRoutes } from './core.routes';
     BrowserModule,
     CommonModule,
     RouterModule.forRoot(coreRoutes, { relativeLinkResolution: 'legacy' }),
+    SharedModule
   ],
   bootstrap: [AppComponent]
 })
