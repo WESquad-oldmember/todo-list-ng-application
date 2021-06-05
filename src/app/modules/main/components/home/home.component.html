@@ -4,16 +4,21 @@
             <mat-card-title>Liste de TODOs</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <ul class="todo-list">
-                <li *ngFor="let todo of todos" class="list-item">
-                    <h3 class="title"><span>{{todo.title}}</span></h3>
-                    <div class="description">{{todo.description}}</div>
-                    <!-- TODO: add checkbox for isDone -->
-                </li>
-            </ul>
+            <ng-container *ngIf="isLoading; else todoListTemplate">
+                <mat-spinner mode="indeterminate"></mat-spinner>
+            </ng-container>
+            <ng-template #todoListTemplate>
+                <ul class="todo-list">
+                    <li *ngFor="let todo of todos" class="list-item">
+                        <h3 class="title"><span>{{todo.title}}</span></h3>
+                        <div class="description">{{todo.description}}</div>
+                        <!-- TODO: add checkbox for isDone -->
+                    </li>
+                </ul>
+            </ng-template>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-flat-button color="primary">
+            <button mat-flat-button color="primary" (click)="addTodo()">
                 <mat-icon>add</mat-icon>Ajouter un TODO
             </button>
         </mat-card-actions>

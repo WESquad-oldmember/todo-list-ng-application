@@ -27,4 +27,14 @@ export class TodoService {
       )
     );
   }
+
+  create(todo: Todo): Observable<any> {
+    return this.http.post(
+      `${environment.api.host}${endpoints.todos}`, todo
+    ).pipe(
+      map(
+        (res: any) => res
+      )
+    );
+  }
 }
