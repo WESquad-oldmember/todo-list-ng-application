@@ -1,0 +1,29 @@
+:host {
+    header {
+        display: flex;
+
+        .nav-bar {
+            width: 100%;
+
+            .app-title {
+                margin: 0 3rem;
+            }
+
+            .nav-items-list {
+                margin-left: 1rem;
+                .nav-item {
+                    display: inline-flex;
+                    a {
+                        display: inline-flex;
+                        align-items: center;
+                        margin-right: 2rem;
+
+                        .mat-icon {
+                            margin-right: 0.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
