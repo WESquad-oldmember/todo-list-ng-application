@@ -5,6 +5,7 @@ body {
     height: 100%;
 }
 body {
+    background-color: #efefef;
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     font-size: 16px;
@@ -12,7 +13,11 @@ body {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #673ab7;
+    font-weight: bold;
+    &:visited {
+        color: #673ab7;
+    }
 }
 
 h3 {
