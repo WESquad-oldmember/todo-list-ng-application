@@ -10,7 +10,7 @@ import { coreRoutes } from './core.routes';
   imports: [
     BrowserModule,
     CommonModule,
-    RouterModule.forRoot(coreRoutes),
+    RouterModule.forRoot(coreRoutes, { relativeLinkResolution: 'legacy' }),
   ],
   bootstrap: [AppComponent]
 })
