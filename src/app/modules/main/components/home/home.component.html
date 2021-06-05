@@ -4,7 +4,13 @@
             <mat-card-title>Liste de TODOs</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            --- WIP ---
+            <ul class="todo-list">
+                <li *ngFor="let todo of todos" class="list-item">
+                    <h3 class="title"><span>{{todo.title}}</span></h3>
+                    <div class="description">{{todo.description}}</div>
+                    <!-- TODO: add checkbox for isDone -->
+                </li>
+            </ul>
         </mat-card-content>
         <mat-card-actions>
             <button mat-flat-button color="primary">
@@ -13,3 +19,5 @@
         </mat-card-actions>
     </mat-card>
 </section>
+
+<!-- TODO: display list of Done items => extract list to component -->
